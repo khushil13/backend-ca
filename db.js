@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 4000;
 
 const data = [
     { id: 1, name: 'Item 1' },
@@ -21,6 +21,6 @@ app.get('/api/data', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${3000}`);
+    console.log(`Server is running at http://localhost:${4000}`);
 });
 
