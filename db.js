@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const data = [
-    { id: 1, name: 'Item 1' },
-    { id: 2, name: 'Item 2' },
-    { id: 3, name: 'Item 3' }
+const users = [
+    { username: 'alice', email: 'alice@example.com' },
+    { username: 'bob', email: 'bob@example.com' },
+    { username: 'charlie', email: 'charlie@example.com' }
 ];
 
 app.use(express.json());
@@ -16,7 +16,7 @@ app.get('/api/data', (req, res) => {
     if (item) {
         res.json({ message: 'User found', userData: item });
     } else {
-        res.status(404).json({ message: 'User not found', error: 'Item not found' });
+        res.status(404).json({ message: 'User not found', userData: null });
     }
 });
 
